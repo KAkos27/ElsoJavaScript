@@ -2,7 +2,7 @@ document.write("Külön fájlból <br>");
 let veletlenTomb = new Array();
 
 function feltolt() {
-  for (let i = 0; i < veletlenTomb.length; i++) {
+  for (let i = 0; i < 50; i++) {
     var vel = Math.floor(Math.random() * 100 + 1);
     veletlenTomb[i] = vel;
   }
