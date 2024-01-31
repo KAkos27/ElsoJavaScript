@@ -1,16 +1,16 @@
 document.write("Külön fájlból <br>");
-var veletlenTomb = new Array();
+let veletlenTomb = new Array();
 
 function feltolt() {
-  for (var i = 0; i < 50; i++) {
+  for (let i = 0; i < veletlenTomb.length; i++) {
     var vel = Math.floor(Math.random() * 100 + 1);
     veletlenTomb[i] = vel;
   }
 }
 
 function kiir() {
-  var szoveg = "";
-  for (var i = 0; i < 50; i++) {
+  let szoveg = "";
+  for (let i = 0; i < veletlenTomb.length; i++) {
     szoveg += veletlenTomb[i] + ", ";
     if (i % 5 == 4) {
       szoveg += "\n";
@@ -20,7 +20,7 @@ function kiir() {
 }
 
 function szamol() {
-  var osszeg = 0;
+  let osszeg = 0;
   for (let i = 0; i < veletlenTomb.length; i++) {
     osszeg += veletlenTomb[i];
   }
@@ -28,7 +28,7 @@ function szamol() {
 }
 
 function parosak() {
-  var paros = 0;
+  let paros = 0;
   for (let i = 0; i < veletlenTomb.length; i++) {
     if (veletlenTomb[i] % 2 == 0) {
       paros++;
@@ -38,7 +38,7 @@ function parosak() {
 }
 
 function egyes() {
-  var egyes = false;
+  let egyes = false;
   for (let i = 0; i < veletlenTomb.length; i++) {
     if (veletlenTomb[i] == 1) {
       egyes = true;
@@ -52,7 +52,7 @@ function egyes() {
 }
 
 function legnagyobb() {
-  var legnagyobbHely = 0;
+  let legnagyobbHely = 0;
   for (let i = 1; i < veletlenTomb.length; i++) {
     if (veletlenTomb[i] > veletlenTomb[legnagyobbHely]) {
       legnagyobbHely = i;
