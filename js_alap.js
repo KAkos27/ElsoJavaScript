@@ -4,14 +4,14 @@ let veletlenTomb = new Array();
 function feltolt() {
   for (let i = 0; i < 50; i++) {
     var vel = Math.floor(Math.random() * 100 + 1);
-    veletlenTomb[i] = vel;
+    gepTipp[i] = vel;
   }
 }
 
 function kiir() {
   let szoveg = "";
-  for (let i = 0; i < veletlenTomb.length; i++) {
-    szoveg += veletlenTomb[i] + ", ";
+  for (let i = 0; i < gepTipp.length; i++) {
+    szoveg += gepTipp[i] + ", ";
     if (i % 5 == 4) {
       szoveg += "\n";
     }
@@ -21,16 +21,16 @@ function kiir() {
 
 function szamol() {
   let osszeg = 0;
-  for (let i = 0; i < veletlenTomb.length; i++) {
-    osszeg += veletlenTomb[i];
+  for (let i = 0; i < gepTipp.length; i++) {
+    osszeg += gepTipp[i];
   }
   alert("A számok összege: " + osszeg);
 }
 
 function parosak() {
   let paros = 0;
-  for (let i = 0; i < veletlenTomb.length; i++) {
-    if (veletlenTomb[i] % 2 == 0) {
+  for (let i = 0; i < gepTipp.length; i++) {
+    if (gepTipp[i] % 2 == 0) {
       paros++;
     }
   }
@@ -39,8 +39,8 @@ function parosak() {
 
 function egyes() {
   let egyes = false;
-  for (let i = 0; i < veletlenTomb.length; i++) {
-    if (veletlenTomb[i] == 1) {
+  for (let i = 0; i < gepTipp.length; i++) {
+    if (gepTipp[i] == 1) {
       egyes = true;
     }
   }
@@ -53,10 +53,10 @@ function egyes() {
 
 function legnagyobb() {
   let legnagyobbHely = 0;
-  for (let i = 1; i < veletlenTomb.length; i++) {
-    if (veletlenTomb[i] > veletlenTomb[legnagyobbHely]) {
+  for (let i = 1; i < gepTipp.length; i++) {
+    if (gepTipp[i] > gepTipp[legnagyobbHely]) {
       legnagyobbHely = i;
     }
   }
-  alert("A legnagyobb elem: " + veletlenTomb[legnagyobbHely]);
+  alert("A legnagyobb elem: " + gepTipp[legnagyobbHely]);
 }
